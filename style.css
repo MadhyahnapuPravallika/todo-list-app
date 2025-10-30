@@ -1,0 +1,9 @@
+body {
+  font-family: Arial;
+  margin: 40px;
+  background: #f8f9fa;
+}
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
