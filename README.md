@@ -8,7 +8,7 @@ Add new tasks
 . Dynamic updates using AngularJS
 
 Technologies Used:
-. HTML – For Structure
+ HTML – For Structure
 . CSS – For Styling
 . AngularJS – For data binding and dynamic updates
 
@@ -18,8 +18,8 @@ How to Run the code:
 3.Right-click index.html → click Open with Live Server or open it directly in the browser
 
 AngularJS Concepts Used:
-. ng-app - Defines the AngularJS application.
-. ng-controller - Connects the view (HTML) with the controller (logic in JavaScript). All variables and functions inside the controller can be accessed in the HTML.
-. ng-model – Creates two-way data binding between the input field and the variable in the controller.
-. ng-repeat – Loops through all tasks in the list and displays them dynamically.
-. ng-click – Triggers functions for add/delete
+ ng-app - Defines the AngularJS application.
+ ng-controller - Connects the view (HTML) with the controller (logic in JavaScript). All variables and functions inside the controller can be accessed in the HTML.
+ ng-model – Creates two-way data binding between the input field and the variable in the controller.
+ ng-repeat – Loops through all tasks in the list and displays them dynamically.
+ ng-click – Triggers functions for add/delete
