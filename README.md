@@ -3,7 +3,7 @@ To-Do List App:
  It allows users to add tasks, view them, and delete when done.
 
 Features:
-. Add new tasks
+Add new tasks
 . Delete existing tasks
 . Dynamic updates using AngularJS
 
