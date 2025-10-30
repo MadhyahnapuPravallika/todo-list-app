@@ -1,9 +1,149 @@
 body {
-  font-family: Arial;
-  margin: 40px;
-  background: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d0eaff, #e3f2fd);
+  margin: 0;
+  padding: 40px;
+  text-align: center;
+  min-height: 100vh;
 }
+
+h1 {
+  color: #1a237e;
+  font-size: 2.5em;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 280px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.error-msg {
+  color: red;
+  font-weight: 500;
+  margin: 10px 0;
+  animation: fadeIn 0.5s ease;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 550px;
+  margin: 25px auto;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+li {
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #f8f9fa;
+}
+
+.serial {
+  font-weight: bold;
+  color: #3949ab;
+}
+
+.task-name {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 1em;
+  color: #2c2c2c;
+}
+
 .done {
   text-decoration: line-through;
   color: gray;
+  opacity: 0.7;
+}
+
+.edit-input {
+  padding: 6px 8px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+.actions button {
+  margin-left: 6px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.done-btn {
+  background-color: #6c757d;
+}
+
+.edit-btn {
+  background-color: #007bff;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.save-btn {
+  background-color: #17a2b8;
+}
+
+.actions button:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

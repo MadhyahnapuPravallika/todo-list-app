@@ -6,31 +6,39 @@
   <title>Simple To-Do List</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body { font-family: Arial; margin: 40px; background: #f8f9fa; }
-    h1 { color: #333; }
-    .done { text-decoration: line-through; color: gray; }
-    input { padding: 8px; width: 250px; }
-    button { margin-left: 5px; padding: 6px 10px; }
-    li { margin: 8px 0; list-style: none; }
-  </style>
 </head>
 
 <body ng-controller="TodoController">
+  <h1>To-Do List App</h1>
 
-  <h1> Simple To-Do List</h1>
+  <div class="input-container">
+    <input type="text" ng-model="newTask" placeholder="Enter new task">
+    <button ng-click="addTask()" class="add-btn">Add</button>
+  </div>
 
-  <input type="text" ng-model="newTask" placeholder="Enter new task">
-  <button ng-click="addTask()">Add</button>
+  <!-- Validation message -->
+  <p class="error-msg" ng-if="errorMsg">{{errorMsg}}</p>
 
   <ul>
     <li ng-repeat="task in tasks">
-      <span ng-class="{done: task.done}">{{task.name}}</span>
-      <button ng-click="markDone(task)">Done</button>
-      <button ng-click="deleteTask($index)">Delete</button>
-    </li>
+  <span class="serial">{{$index + 1}}.</span>
+
+  <!-- show task name OR editable input -->
+  <span class="task-name" ng-class="{done: task.done}">
+    <span ng-if="!task.editing">{{task.name}}</span>
+    <input ng-if="task.editing" type="text" ng-model="task.name" class="edit-input">
+  </span>
+
+  <div class="actions">
+    <button class="done-btn" ng-click="markDone(task)">Done</button>
+    <button ng-if="!task.editing" class="edit-btn" ng-click="editTask(task)">Edit</button>
+    <button ng-if="task.editing" class="save-btn" ng-click="saveTask(task)">Save</button>
+    <button class="delete-btn" ng-click="deleteTask($index)">Delete</button>
+  </div>
+</li>
+
   </ul>
 
+  <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
