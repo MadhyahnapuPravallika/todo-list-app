@@ -1,6 +1,6 @@
 To-Do List App:
  This is a simple to-do list application made using HTML, CSS, and AngularJS.
- It allows users to add tasks, view them, and delete when done.
+ It allows users to add tasks, view them, edit them and delete when done.
 
 Features:
 Add new tasks
